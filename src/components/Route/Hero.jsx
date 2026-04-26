@@ -13,7 +13,7 @@ function Hero() {
     >
       <div className="w-2xl mx-auto w-[90%] md:w-[60%]">
         <h1 className="text-[35px] leading-[1.2] 800px:text-[60px] text-[#3d3a3a] font-[600] capitalize">
-          Best Collection for <br /> home Decoration
+          Best Collection for <br /> tech products.
         </h1>
         <p className="pt-5 text-[18px] font-[Poppins] font-[400] text-[#000000ba]">
           Welcome to our premium e-commerce platform, your one-stop destination for everything you need. <br/> 

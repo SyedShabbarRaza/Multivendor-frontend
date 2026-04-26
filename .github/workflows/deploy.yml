@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: ap-south-1
   S3_BUCKET: multivendor-st-bucket
-  CLOUDFRONT_DIST_ID: E1BCP66X0QD55          # from your screenshot
+  CLOUDFRONT_DIST_ID: E1BCPD66XOQD55
   REACT_APP_API_URL: https://shabbar.dpdns.org
 
 jobs:
@@ -45,4 +45,4 @@ jobs:
 
       - name: Invalidate CloudFront cache
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DIST_ID }} --paths "/*" --region us-east-1
+          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DIST_ID }} --paths "/*"

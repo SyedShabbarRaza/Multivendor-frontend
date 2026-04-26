@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: ap-south-1
   S3_BUCKET: multivendor-st-bucket          # Your S3 bucket name
-  CLOUDFRONT_DIST_ID: EWGI6MT49DZDI         # Your CloudFront distribution ID
+  CLOUDFRONT_DIST_ID: E1BCPD66XOQD55         # Your CloudFront distribution ID
   REACT_APP_API_URL: https://shabbar.dpdns.org   # Backend URL (your domain)
 
 jobs:

@@ -6,9 +6,9 @@ on:
 
 env:
   AWS_REGION: ap-south-1
-  S3_BUCKET: multivendor-st-bucket          # Your S3 bucket name
-  CLOUDFRONT_DIST_ID: E1BCPD66XOQD55         # Your CloudFront distribution ID
-  REACT_APP_API_URL: https://shabbar.dpdns.org   # Backend URL (your domain)
+  S3_BUCKET: multivendor-st-bucket
+  CLOUDFRONT_DIST_ID: E1BCP66X0QD55          # from your screenshot
+  REACT_APP_API_URL: https://shabbar.dpdns.org
 
 jobs:
   deploy:
@@ -39,9 +39,9 @@ jobs:
         env:
           REACT_APP_API_URL: ${{ env.REACT_APP_API_URL }}
 
-      - name: Sync build folder to S3
+      - name: Sync dist folder to S3 (under /dist prefix)
         run: |
-          aws s3 sync dist/ s3://${{ env.S3_BUCKET }}/ --delete
+          aws s3 sync dist/ s3://${{ env.S3_BUCKET }}/dist/ --delete
 
       - name: Invalidate CloudFront cache
         run: |
